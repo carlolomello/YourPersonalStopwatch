@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="YourPSW.View.PopUpComponent.TasksPopUp"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup">
+
+            <StackLayout Margin="12" Padding="24" Spacing="24" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="White">
+
+                <StackLayout>
+                    <Entry x:Name="taskName" Placeholder="Task name"/>
+                </StackLayout>
+                <StackLayout>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                        <Label Text="HH"/>
+                        <Label Text="MM"/>
+                        <Label Text="SS"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" >
+                        <Picker  x:Name="pickerH" SelectedItem="{Binding StartDate}"/>
+                        <Picker  x:Name="pickerM" SelectedItem="{Binding StartDateM}"/>
+                        <Picker  x:Name="pickerS" SelectedItem="{Binding StartDateS}"/>
+                    </StackLayout>
+         
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Label Text="SoundAlert" />
+                </StackLayout>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" >
+                        <Picker  x:Name="soundPicker" SelectedIndex="0" SelectedItem="{Binding StartSound}"/>
+                </StackLayout>
+
+                <StackLayout>
+                    <Button Text="Salva" Clicked="SaveTask"/>
+                </StackLayout>
+
+            </StackLayout>
+</pages:PopupPage>
+
+
+

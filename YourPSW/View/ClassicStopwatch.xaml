@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="YourPSW.View.ClassicStopwatch">
+    <StackLayout>
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
+            <Label>Classic stopwatch</Label>
+        </StackLayout>
+        <StackLayout HorizontalOptions="CenterAndExpand"
+            VerticalOptions="CenterAndExpand">
+            <Label x:Name="lblStopWatch"></Label>
+        </StackLayout>
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand">
+            <Button x:Name="btnStart" Clicked="BtnStartClicked" Text="Start"></Button>
+            <Button x:Name="btnReset" Clicked="BtnResetClicked" Text="Restart"></Button>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="YourPSW.View.SelectedSW">
+    <StackLayout>
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
+            <Label x:Name="Lb_Id" Text="" IsVisible="False"/>
+            <Label x:Name="Lb_stopwatch_name" Text="" />
+        </StackLayout>
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+            <ListView x:Name="TasksListView"  SelectionMode="None">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout  Orientation="Horizontal">
+                            <!-- <Label x:Name="position" Text="{Binding position}"></Label> -->
+                            <Label x:Name="name" Text="{Binding time_name}" ></Label>
+                            <Label x:Name="duration" Text="{Binding duration_time}"  ></Label>
+                            <!-- <Label x:Name="sound" Text="{Binding sound_name}"  ></Label> -->
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        </StackLayout>
+        <StackLayout>
+            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <Label x:Name="lblStopWatch" ></Label>
+            </StackLayout>
+            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                 <Button x:Name="btnStart" Clicked="BtnStartClicked" Text="Start"></Button>
+            <Button x:Name="btnReset" Clicked="BtnResetClicked" Text="Restart"></Button>
+            </StackLayout>
+        </StackLayout>
+        <StackLayout HorizontalOptions="StartAndExpand" VerticalOptions="EndAndExpand">
+             <Button Text="Delete SW" Clicked="DeleteBtn"></Button>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

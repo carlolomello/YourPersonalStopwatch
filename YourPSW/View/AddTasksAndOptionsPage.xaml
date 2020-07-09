@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="YourPSW.View.AddTasksAndOptionsPage">
+    <StackLayout>
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
+            <Label>Aggiungi un nuovo Stopwatch!</Label>
+        </StackLayout>
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+            <Entry x:Name="StopWatchName"
+                   Placeholder="Enter name" />
+        </StackLayout>
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
+            <ListView x:Name="timewatchesListView"  SelectionMode="None">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell x:Name="textCell" Text=" {Binding time_name} "
+                                  Detail=" {Binding duration_time} " />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand">
+            <Button Text="Add Entry"
+                Clicked="btnAddANewEntry" />
+            <Button Text="Remove Entry"
+                Clicked="btnRemoveALastEntry" />
+        </StackLayout>
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand">
+            <Button Text="Add Stopwatch"
+                Clicked="btnSaveStopwatch" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
